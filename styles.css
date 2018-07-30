@@ -160,6 +160,48 @@ hr {
 }
 
 /*---------------------------------------------*/
+/*  gallery  */
+/*---------------------------------------------*/
+
+#gallery {
+    background-color: white;
+}
+
+#gallery .grid li {
+    padding: 20px;
+    height: 350px;
+    border-radius: 3px;
+    background-size: cover;
+    background-position: center;
+    background-clip: content-box;
+    background-color: #333;
+}
+
+#gallery ul.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#gallery li.small {
+    flex-basis: 40%;
+}
+
+#gallery li.large {
+    flex-basis: 60%;
+}
+
+#gallery p {
+    text-align: center;
+    line-height: 2;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    padding: 0 20px;
+    max-width: 800px;
+}
+
+/*---------------------------------------------*/
 /*media queries*/
 /*---------------------------------------------*/
 
@@ -195,5 +237,12 @@ hr {
         line-height: 1.5;
         text-align: left;
         margin-top: 20px;
+    }
+}
+
+@media(max-width: 1000px) {
+    #gallery li.small,
+    #gallery li.large {
+        flex-basis: 100%;
     }
 }
